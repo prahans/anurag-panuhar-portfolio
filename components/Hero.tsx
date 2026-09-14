@@ -1,5 +1,4 @@
 import { FaLocationArrow } from "react-icons/fa6";
-import { profile } from "@/data";
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
@@ -7,12 +6,12 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
   return (
-    <section aria-labelledby="hero-heading" className="pb-20 pt-36">
+    <div className="pb-20 pt-36">
       {/**
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight
        */}
-      <div aria-hidden="true" className="pointer-events-none">
+      <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
           fill="white"
@@ -30,9 +29,8 @@ const Hero = () => {
        *  0.2 to 0.03
        */}
       <div
-        aria-hidden="true"
         className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
-       pointer-events-none absolute top-0 left-0 flex items-center justify-center"
+       absolute top-0 left-0 flex items-center justify-center"
       >
         {/* Radial gradient for the container to give a faded look */}
         <div
@@ -53,26 +51,25 @@ const Hero = () => {
            *
            *  change md:text-6xl, add more responsive code
            */}
-          <div id="hero-heading" role="heading" aria-level={1}>
-            <TextGenerateEffect
-              words="Transforming Concepts into Seamless User Experiences"
-              className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            />
-          </div>
+          <TextGenerateEffect
+            words="Transforming Concepts into Seamless User Experiences"
+            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+          />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            {profile.introduction}
+            Hi! I&apos;m Adrian, a Next.js Developer based in Croatia.
           </p>
 
-          <MagicButton
-            href="#projects"
-            title="Show my work"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
+          <a href="#about">
+            <MagicButton
+              title="Show my work"
+              icon={<FaLocationArrow />}
+              position="right"
+            />
+          </a>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

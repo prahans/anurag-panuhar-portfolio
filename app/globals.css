@@ -1,70 +1,6 @@
-@import "tailwindcss";
-
-@theme {
-  --color-black-100: #000319;
-  --color-black-200: #0c0e23;
-  --color-black-300: #262a3d;
-  --color-black-default: #000;
-  --color-white-100: #bec1dd;
-  --color-white-200: #c1c2d3;
-  --color-blue-100: #e4ecff;
-  --color-purple: #cbacf9;
-  --shadow-input: 0 2px 3px -1px rgb(0 0 0 / 0.1), 0 1px 0 rgb(25 28 33 / 0.02), 0 0 0 1px rgb(25 28 33 / 0.08);
-  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
-  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, normal) linear infinite;
-  --animate-first: move-vertical 30s ease infinite;
-  --animate-second: move-in-circle 20s reverse infinite;
-  --animate-third: move-in-circle 40s linear infinite;
-  --animate-fourth: move-horizontal 40s ease infinite;
-  --animate-fifth: move-in-circle 20s ease infinite;
-
-  @keyframes spotlight {
-    from { opacity: 0; transform: translate(-72%, -62%) scale(0.5); }
-    to { opacity: 1; transform: translate(-50%, -40%) scale(1); }
-  }
-  @keyframes scroll {
-    to { transform: translateX(calc(-50% - 0.5rem)); }
-  }
-  @keyframes move-vertical {
-    0%, 100% { transform: translateY(-50%); }
-    50% { transform: translateY(50%); }
-  }
-  @keyframes move-in-circle {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-  @keyframes move-horizontal {
-    0%, 100% { transform: translate(-50%, -10%); }
-    50% { transform: translate(50%, 10%); }
-  }
-}
-
-@custom-variant dark (&:where(.dark, .dark *));
-
-@theme inline {
-  --color-background: hsl(var(--background));
-  --color-foreground: hsl(var(--foreground));
-  --color-card: hsl(var(--card));
-  --color-card-foreground: hsl(var(--card-foreground));
-  --color-popover: hsl(var(--popover));
-  --color-popover-foreground: hsl(var(--popover-foreground));
-  --color-primary: hsl(var(--primary));
-  --color-primary-foreground: hsl(var(--primary-foreground));
-  --color-secondary: hsl(var(--secondary));
-  --color-secondary-foreground: hsl(var(--secondary-foreground));
-  --color-muted: hsl(var(--muted));
-  --color-muted-foreground: hsl(var(--muted-foreground));
-  --color-accent: hsl(var(--accent));
-  --color-accent-foreground: hsl(var(--accent-foreground));
-  --color-destructive: hsl(var(--destructive));
-  --color-destructive-foreground: hsl(var(--destructive-foreground));
-  --color-border: hsl(var(--border));
-  --color-input: hsl(var(--input));
-  --color-ring: hsl(var(--ring));
-  --radius-lg: var(--radius);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-sm: calc(var(--radius) - 4px);
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   :root {
@@ -132,34 +68,18 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border !scroll-smooth;
   }
   body {
     @apply bg-background text-foreground;
   }
-  @media (prefers-reduced-motion: no-preference) {
-    html {
-      scroll-behavior: smooth;
-    }
+  button {
+    @apply active:outline-none;
   }
 }
 
 @layer utilities {
-  .bg-grid-pattern {
-    background-image: linear-gradient(to right, rgb(255 255 255 / 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgb(255 255 255 / 0.03) 1px, transparent 1px);
-    background-size: 100px 100px;
-  }
-
   .heading {
     @apply font-bold text-4xl md:text-5xl text-center;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-delay: 0ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
   }
 }
