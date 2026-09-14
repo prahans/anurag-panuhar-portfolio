@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import React from "react";
+import { useId } from "react";
 
 type SpotlightProps = {
   className?: string;
@@ -7,8 +7,10 @@ type SpotlightProps = {
 };
 
 export const Spotlight = ({ className, fill }: SpotlightProps) => {
+  const filterId = useId();
   return (
     <svg
+      aria-hidden="true"
       className={cn(
         "animate-spotlight pointer-events-none absolute z-[1]  h-[169%] w-[138%] lg:w-[84%] opacity-0",
         className
@@ -17,7 +19,7 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
       viewBox="0 0 3787 2842"
       fill="none"
     >
-      <g filter="url(#filter)">
+      <g filter={`url(#${filterId})`}>
         <ellipse
           cx="1924.71"
           cy="273.501"
@@ -30,7 +32,7 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
       </g>
       <defs>
         <filter
-          id="filter"
+          id={filterId}
           x="0.860352"
           y="0.838989"
           width="3785.16"

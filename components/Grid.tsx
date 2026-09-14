@@ -3,12 +3,13 @@ import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 
 const Grid = () => {
   return (
-    <section id="about">
+    <section id="about" aria-labelledby="about-heading" className="scroll-mt-28">
+      <h2 id="about-heading" className="sr-only">About me</h2>
       <BentoGrid className="w-full py-20">
-        {gridItems.map((item, i) => (
+        {gridItems.map((item) => (
           <BentoGridItem
             id={item.id}
-            key={i}
+            key={item.id}
             title={item.title}
             description={item.description}
             // remove icon prop

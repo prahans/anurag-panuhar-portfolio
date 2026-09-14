@@ -1,3 +1,31 @@
+export interface Profile {
+  name: string;
+  introduction: string;
+  email?: string;
+}
+
+export interface Project {
+  id: number;
+  title: string;
+  des: string;
+  img: string;
+  iconLists: string[];
+  link?: string;
+}
+
+export interface SocialLink {
+  id: number;
+  name: string;
+  img: string;
+  href?: string;
+}
+
+// Add your email and real project/social URLs here when ready.
+export const profile: Profile = {
+  name: "Anurag Panuhar",
+  introduction: "Welcome to my portfolio. Explore my projects and the ideas behind them.",
+};
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -69,14 +97,14 @@ export const gridItems = [
   },
 ];
 
-export const projects = [
+// The project, testimonial, and experience entries below are tutorial samples.
+export const projects: Project[] = [
   {
     id: 1,
     title: "3D Solar System Planets to Explore",
     des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
     img: "/p1.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
   },
   {
     id: 2,
@@ -84,7 +112,6 @@ export const projects = [
     des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
     img: "/p2.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
   },
   {
     id: 3,
@@ -92,7 +119,6 @@ export const projects = [
     des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
     img: "/p3.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
   },
   {
     id: 4,
@@ -100,7 +126,6 @@ export const projects = [
     des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
     img: "/p4.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
   },
 ];
 
@@ -201,17 +226,20 @@ export const workExperience = [
   },
 ];
 
-export const socialMedia = [
+export const socialMedia: SocialLink[] = [
   {
     id: 1,
     img: "/git.svg",
+    name: "GitHub",
   },
   {
     id: 2,
     img: "/twit.svg",
+    name: "X",
   },
   {
     id: 3,
     img: "/link.svg",
+    name: "LinkedIn",
   },
 ];
