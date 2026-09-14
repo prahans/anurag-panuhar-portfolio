@@ -7,8 +7,9 @@ import { ThemeProvider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Adrian's Portfolio",
-  description: "Modern & Minimal JS Mastery Portfolio",
+  title: "Anurag Panuhar | Junior Full-Stack Developer",
+  description:
+    "Portfolio of Anurag Panuhar, a junior full-stack developer building modern web applications with React, TypeScript, Node.js, Express, MongoDB, and PostgreSQL.",
 };
 
 export default function RootLayout({
@@ -26,8 +27,7 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="dark"
           enableSystem
-          disableTransitionOnChange
-        >
+          disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>
