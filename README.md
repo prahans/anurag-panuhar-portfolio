@@ -1,24 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Anurag Panuhar's portfolio, built with Next.js App Router, TypeScript, and Tailwind CSS v4.
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies, then run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Edit portfolio content in `data/index.ts` and section components in `components/`. The homepage composes these sections in `app/page.tsx`. Projects, testimonials, and experience start empty so you can add your own details.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Custom Tailwind colors and light/dark theme variables live in `app/globals.css`. The theme provider in `app/provider.tsx` uses `next-themes` and defaults to dark mode.
+
+This project uses `next/font` to load Inter. The first production build needs network access to download the font from Google.
+
+## Checks
+
+```bash
+npm run typecheck
+npm run lint
+npm run build
+```
+
+`typecheck` generates Next.js route types before checking TypeScript. After a successful build, use `npm start` to run the production server.
+
+## Example routes
+
+`/sentry-example-page` checks `/api/sentry-example-api` and displays request failures without throwing an unhandled error. Sentry is not installed or configured; this example does not send monitoring events. The global error boundary logs unexpected errors to the console.
 
 ## Learn More
 
