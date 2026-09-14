@@ -1,29 +1,39 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
 
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 type Direction = "TOP" | "LEFT" | "BOTTOM" | "RIGHT";
 
-export function HoverBorderGradient({
+type HoverBorderOwnProps = {
+  children?: React.ReactNode;
+  containerClassName?: string;
+  className?: string;
+  duration?: number;
+  clockwise?: boolean;
+};
+
+type HoverBorderGradientProps<T extends React.ElementType = "button"> =
+  HoverBorderOwnProps & {
+    as?: T;
+  } & Omit<React.ComponentPropsWithoutRef<T>, keyof HoverBorderOwnProps | "as">;
+
+export function HoverBorderGradient<T extends React.ElementType = "button">({
   children,
   containerClassName,
   className,
-  as: Tag = "button",
+  as,
   duration = 1,
   clockwise = true,
   ...props
-}: React.PropsWithChildren<
-  {
-    as?: React.ElementType;
-    containerClassName?: string;
-    className?: string;
-    duration?: number;
-    clockwise?: boolean;
-  } & React.HTMLAttributes<HTMLElement>
->) {
-  const [hovered, setHovered] = useState<boolean>(false);
+}: HoverBorderGradientProps<T>) {
+  // Keep the public props generic while resolving the dynamic JSX tag internally.
+  const Tag = (as ?? "button") as React.ElementType<
+    React.HTMLAttributes<HTMLElement>
+  >;
+
+  const [hovered, setHovered] = useState(false);
   const [direction, setDirection] = useState<Direction>("TOP");
 
   const rotateDirection = (currentDirection: Direction): Direction => {
@@ -57,27 +67,25 @@ export function HoverBorderGradient({
   }, [hovered]);
   return (
     <Tag
-      onMouseEnter={(event: React.MouseEvent<HTMLDivElement>) => {
+      onMouseEnter={() => {
         setHovered(true);
       }}
       onMouseLeave={() => setHovered(false)}
       className={cn(
         "relative flex rounded-full border  content-center bg-black/20 hover:bg-black/10 transition duration-500 dark:bg-white/20 items-center flex-col flex-nowrap gap-10 h-min justify-center overflow-visible p-px decoration-clone w-fit",
-        containerClassName
+        containerClassName,
       )}
-      {...props}
-    >
+      {...props}>
       <div
         className={cn(
           "w-auto text-white z-10 bg-black px-4 py-2 rounded-[inherit]",
-          className
-        )}
-      >
+          className,
+        )}>
         {children}
       </div>
       <motion.div
         className={cn(
-          "flex-none inset-0 overflow-hidden absolute z-0 rounded-[inherit]"
+          "flex-none inset-0 overflow-hidden absolute z-0 rounded-[inherit]",
         )}
         style={{
           filter: "blur(2px)",
