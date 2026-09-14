@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   title: "Anurag Panuhar | Junior Full-Stack Developer",
   description:
     "Portfolio of Anurag Panuhar, a junior full-stack developer building modern web applications with React, TypeScript, Node.js, Express, MongoDB, and PostgreSQL.",
+
+  icons: {
+    icon: [
+      {
+        url: "/favicon-light.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/favicon-dark.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
