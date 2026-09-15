@@ -236,14 +236,14 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
+    name: "GitHub",
     img: "/git.svg",
-  },
-  {
-    id: 2,
-    img: "/twit.svg",
+    link: "https://github.com/prahans",
   },
   {
     id: 3,
+    name: "LinkedIn",
     img: "/link.svg",
+    link: "https://www.linkedin.com/in/anurag-panuhar-786265381/",
   },
 ];
