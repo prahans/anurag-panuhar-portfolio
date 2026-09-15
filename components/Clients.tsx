@@ -1,8 +1,6 @@
 "use client";
 
-import React from "react";
-
-import { companies, testimonials } from "@/data";
+import { companies as toolsAndPlatforms, testimonials } from "@/data";
 import { InfiniteMovingCards } from "./ui/InfiniteCards";
 
 const Clients = () => {
@@ -21,25 +19,35 @@ const Clients = () => {
           />
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10">
-          {companies.map((company) => (
-            <React.Fragment key={company.id}>
-              <div className="flex md:max-w-60 max-w-32 gap-2">
+        <section
+          aria-labelledby="tools-platforms-heading"
+          className="mt-8 w-full border-t border-white/10 pt-10">
+          <h2
+            id="tools-platforms-heading"
+            className="text-center text-2xl sm:text-3xl font-bold">
+            Tools &amp; Platforms{" "}
+            <span className="text-purple">I Work With</span>
+          </h2>
+          <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-12">
+            {toolsAndPlatforms.map((platform) => (
+              <li key={platform.id} className="flex items-center gap-3">
                 <img
-                  src={company.img}
-                  alt={company.name}
-                  className="md:w-10 w-5"
+                  src={platform.img}
+                  alt=""
+                  aria-hidden="true"
+                  width={32}
+                  height={32}
+                  className="h-8 w-8 shrink-0 object-contain sm:h-10 sm:w-10"
                 />
                 <img
-                  src={company.nameImg}
-                  alt={company.name}
-                  width={company.id === 4 || company.id === 5 ? 100 : 150}
-                  className="md:w-24 w-20"
+                  src={platform.nameImg}
+                  alt={platform.name}
+                  className="h-6 w-auto max-w-32 object-contain sm:h-7"
                 />
-              </div>
-            </React.Fragment>
-          ))}
-        </div>
+              </li>
+            ))}
+          </ul>
+        </section>
       </div>
     </section>
   );
