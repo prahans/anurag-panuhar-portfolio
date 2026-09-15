@@ -16,17 +16,14 @@ const RecentProjects = () => {
         {projects.map((item) => (
           <div
             className="h-[26rem] lg:h-[30rem] flex items-center justify-center sm:w-96 w-[min(80vw,24rem)]"
-            key={item.id}
-          >
+            key={item.id}>
             <PinContainer
               title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
-            >
+              href="https://twitter.com/mannupaaji">
               <div className="relative flex items-center justify-center sm:w-96 w-[min(80vw,24rem)] overflow-hidden aspect-video mb-8">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                  style={{ backgroundColor: "#13162D" }}
-                >
+                  style={{ backgroundColor: "#13162D" }}>
                   <img src="/bg.png" alt="bgimg" />
                 </div>
                 <img
@@ -45,8 +42,7 @@ const RecentProjects = () => {
                 style={{
                   color: "#BEC1DD",
                   margin: "1vh 0",
-                }}
-              >
+                }}>
                 {item.des}
               </p>
 
@@ -58,8 +54,7 @@ const RecentProjects = () => {
                       className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                       style={{
                         transform: `translateX(-${5 * index + 2}px)`,
-                      }}
-                    >
+                      }}>
                       <img src={icon} alt="icon5" className="p-2" />
                     </div>
                   ))}
