@@ -13,6 +13,7 @@ const MagicButton = ({
   icon,
   position,
   href,
+  download,
   handleClick,
   otherClasses,
 }: {
@@ -20,6 +21,7 @@ const MagicButton = ({
   icon: React.ReactNode;
   position: string;
   href?: string;
+  download?: string | boolean;
   handleClick?: () => void;
   otherClasses?: string;
 }) => {
@@ -28,6 +30,7 @@ const MagicButton = ({
   return (
     <Component
       href={href}
+      download={href ? download : undefined}
       type={href ? undefined : "button"}
       className="relative inline-flex h-12 w-full md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] focus:outline-none focus-visible:ring-2 focus-visible:ring-purple"
       onClick={handleClick}

@@ -1,4 +1,4 @@
-import { FaLocationArrow, FaPhone } from "react-icons/fa6";
+import { FaDownload, FaLocationArrow, FaPhone } from "react-icons/fa6";
 
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
@@ -32,6 +32,13 @@ const Footer = () => {
           icon={<FaLocationArrow aria-hidden="true" />}
           position="right"
         />
+        <a
+          href="/Anurag_Panuhar_Web_Developer_Resume.pdf"
+          download="Anurag_Panuhar_Web_Developer_Resume.pdf"
+          className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-lg px-3 py-2 text-white-200 transition-colors hover:text-purple focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple">
+          <FaDownload aria-hidden="true" />
+          <span>Download Resume (PDF)</span>
+        </a>
         <a
           href="tel:+9779707108983"
           aria-label="Call Anurag Panuhar at +977 9707108983"

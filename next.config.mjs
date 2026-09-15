@@ -1,6 +1,21 @@
 import { withSentryConfig } from "@sentry/nextjs/config";
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  async headers() {
+    return [
+      {
+        source: "/Anurag_Panuhar_Web_Developer_Resume.pdf",
+        headers: [
+          {
+            key: "Content-Disposition",
+            value:
+              'attachment; filename="Anurag_Panuhar_Web_Developer_Resume.pdf"',
+          },
+        ],
+      },
+    ];
+  },
+};
 
 export default withSentryConfig(
   nextConfig,

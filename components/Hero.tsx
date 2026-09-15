@@ -1,4 +1,4 @@
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaDownload, FaLocationArrow } from "react-icons/fa6";
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
@@ -61,13 +61,21 @@ Full-Stack Experiences"
             APIs, authentication systems, and full-stack products.
           </p>
 
-          <a href="#about">
+          <div className="flex w-full max-w-xl flex-col items-center gap-4 md:flex-row md:justify-center">
             <MagicButton
+              href="#about"
               title="Show my work"
-              icon={<FaLocationArrow />}
+              icon={<FaLocationArrow aria-hidden="true" />}
               position="right"
             />
-          </a>
+            <MagicButton
+              href="/Anurag_Panuhar_Web_Developer_Resume.pdf"
+              download="Anurag_Panuhar_Web_Developer_Resume.pdf"
+              title="Download Resume (PDF)"
+              icon={<FaDownload aria-hidden="true" />}
+              position="right"
+            />
+          </div>
         </div>
       </div>
     </div>
