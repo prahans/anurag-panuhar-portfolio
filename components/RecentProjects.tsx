@@ -1,6 +1,6 @@
 "use client";
 
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaGithub, FaLocationArrow } from "react-icons/fa6";
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
@@ -17,9 +17,7 @@ const RecentProjects = () => {
           <div
             className="h-[26rem] lg:h-[30rem] flex items-center justify-center sm:w-96 w-[min(80vw,24rem)]"
             key={item.id}>
-            <PinContainer
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji">
+            <PinContainer title={item.title}>
               <div className="relative flex items-center justify-center sm:w-96 w-[min(80vw,24rem)] overflow-hidden aspect-video mb-8">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
@@ -46,7 +44,7 @@ const RecentProjects = () => {
                 {item.des}
               </p>
 
-              <div className="flex items-center justify-between mt-7 mb-3">
+              <div className="flex flex-wrap items-center justify-between gap-4 mt-7 mb-3">
                 <div className="flex items-center">
                   {item.iconLists.map((icon, index) => (
                     <div
@@ -60,11 +58,25 @@ const RecentProjects = () => {
                   ))}
                 </div>
 
-                <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
-                  </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
+                <div className="flex flex-wrap items-center gap-3">
+                  <a
+                    href={item.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`View ${item.title} on GitHub (opens in a new tab)`}
+                    className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-white/20 px-3 py-2 text-sm text-white transition-colors hover:border-purple hover:text-purple focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple">
+                    <FaGithub aria-hidden="true" />
+                    GitHub
+                  </a>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Open ${item.title} live demo (opens in a new tab)`}
+                    className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-purple/40 bg-purple/10 px-3 py-2 text-sm text-purple transition-colors hover:bg-purple/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple">
+                    Live Demo
+                    <FaLocationArrow aria-hidden="true" />
+                  </a>
                 </div>
               </div>
             </PinContainer>

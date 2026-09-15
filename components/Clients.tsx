@@ -7,16 +7,13 @@ import { InfiniteMovingCards } from "./ui/InfiniteCards";
 
 const Clients = () => {
   return (
-    <section id="testimonials" className="py-20">
+    <section id="skills" className="py-20">
       <h1 className="heading">
-        Kind words from
-        <span className="text-purple"> satisfied clients</span>
+        What I bring as a <span className="text-purple">developer</span>
       </h1>
 
       <div className="flex flex-col items-center max-lg:mt-10">
-        <div
-          className="w-full min-w-0 py-10 md:py-12 rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden"
-        >
+        <div className="w-full min-w-0 py-10 md:py-12 rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
           <InfiniteMovingCards
             items={testimonials}
             direction="right"
