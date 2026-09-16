@@ -2,20 +2,20 @@
 
 ### Junior Full-Stack Developer from Nepal 🇳🇵
 
-🌱 I'm currently improving my **Backend Development & System Design** skills.
+🌱 I'm currently strengthening my skills in **Backend Development, System Design, and Full-Stack Architecture**.
 
-💻 I enjoy building full-stack applications with **React, Node.js, Express & TypeScript**.
+💻 I enjoy building modern web applications using **React, Next.js, Node.js, Express, and TypeScript**.
 
-🚀 I'm currently open to **Junior Full-Stack / Backend Developer opportunities**.
+👨‍💻 You can find all of my projects at [anurag-panuhar-portfolio.vercel.app](https://anurag-panuhar-portfolio.vercel.app/)
 
-🌐 Portfolio: [anurag-panuhar-portfolio.vercel.app](https://anurag-panuhar-portfolio.vercel.app/)
+🚀 I'm currently open to **Junior Full-Stack Developer and Backend Developer opportunities**.
 
 ## Connect with me
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Anurag%20Panuhar-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/anurag-panuhar-786265381/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Anurag%20Panuhar-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anurag-panuhar-786265381/)
 
 ## Languages and Tools
 
 <p>
-  <img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,express,mongodb,postgres,git,github,tailwind" />
+  <img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,express,mongodb,postgres,git,github,tailwind,vercel" />
 </p>
