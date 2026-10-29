@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">PatchVerdict project illustration</title>
+<desc id="desc">A stylized dark mission control interface with investigation steps and evidence-based verdicts.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0E1632"/><stop offset="1" stop-color="#080B1C"/></linearGradient>
+  <linearGradient id="accent" x1="0" x2="1"><stop stop-color="#8B5CF6"/><stop offset="1" stop-color="#22D3EE"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#6D5DF5" stop-opacity=".3"/><stop offset="1" stop-color="#6D5DF5" stop-opacity="0"/></radialGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="22" stdDeviation="32" flood-color="#000" flood-opacity=".45"/></filter>
+</defs>
+<rect width="1200" height="675" fill="url(#bg)"/>
+<circle cx="1010" cy="155" r="340" fill="url(#glow)"/>
+<g opacity=".13" stroke="#6C80AD"><path d="M0 100H1200M0 200H1200M0 300H1200M0 400H1200M0 500H1200M0 600H1200M100 0V675M300 0V675M500 0V675M700 0V675M900 0V675M1100 0V675"/></g>
+<rect x="60" y="60" width="1080" height="555" rx="28" fill="#0D142B" stroke="#394364" stroke-opacity=".8" filter="url(#shadow)"/>
+<rect x="60" y="60" width="1080" height="76" rx="28" fill="#151E3A"/>
+<path d="M60 112H1140" stroke="#374365"/>
+<path d="M106 89L121 104L106 119L91 104Z" fill="url(#accent)"/>
+<text x="147" y="112" font-family="Arial, sans-serif" font-weight="700" font-size="26" letter-spacing="2" fill="#F4F4FF">PATCHVERDICT</text>
+<rect x="858" y="83" width="238" height="35" rx="17" fill="#243154" stroke="#58628C"/>
+<circle cx="884" cy="101" r="5" fill="#34D399"/>
+<text x="900" y="109" font-family="Arial, sans-serif" font-size="17" fill="#D4DAF6">MISSION CONTROL</text>
+<text x="102" y="195" font-family="Arial, sans-serif" font-weight="700" font-size="40" fill="#FFFFFF">Candidate repairs.</text>
+<text x="102" y="239" font-family="Arial, sans-serif" font-weight="700" font-size="40" fill="#A8B0FF">Recorded evidence.</text>
+<rect x="96" y="278" width="489" height="291" rx="20" fill="#131C38" stroke="#364365"/>
+<text x="127" y="322" font-family="Arial, sans-serif" font-weight="700" font-size="17" letter-spacing="2" fill="#A7B6F0">INVESTIGATION PIPELINE</text>
+<path d="M153 369V503" stroke="#53618A" stroke-width="3" stroke-dasharray="7 8"/>
+<circle cx="153" cy="373" r="17" fill="#6D55DB"/><text x="147" y="380" font-family="Arial, sans-serif" font-weight="700" font-size="18" fill="#fff">1</text>
+<circle cx="153" cy="440" r="17" fill="#6D55DB"/><text x="147" y="447" font-family="Arial, sans-serif" font-weight="700" font-size="18" fill="#fff">2</text>
+<circle cx="153" cy="507" r="17" fill="#6D55DB"/><text x="147" y="514" font-family="Arial, sans-serif" font-weight="700" font-size="18" fill="#fff">3</text>
+<text x="194" y="382" font-family="Arial, sans-serif" font-size="24" fill="#F0F2FF">Reproduce failure</text>
+<text x="194" y="449" font-family="Arial, sans-serif" font-size="24" fill="#F0F2FF">Investigate &amp; patch</text>
+<text x="194" y="516" font-family="Arial, sans-serif" font-size="24" fill="#F0F2FF">Verify with tests</text>
+<rect x="612" y="278" width="491" height="291" rx="20" fill="#131C38" stroke="#364365"/>
+<text x="641" y="322" font-family="Arial, sans-serif" font-weight="700" font-size="17" letter-spacing="2" fill="#A7B6F0">EVIDENCE-BASED VERDICTS</text>
+<rect x="642" y="348" width="430" height="57" rx="12" fill="#173B36"/><circle cx="674" cy="377" r="10" fill="#4ADE80"/><text x="702" y="386" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#C7FBE4">VERIFIED</text>
+<rect x="642" y="417" width="430" height="57" rx="12" fill="#383322"/><circle cx="674" cy="445" r="10" fill="#FBBF24"/><text x="702" y="454" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#FFE8B4">REVIEW REQUIRED</text>
+<rect x="642" y="486" width="430" height="57" rx="12" fill="#402634"/><circle cx="674" cy="515" r="10" fill="#FB7185"/><text x="702" y="524" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#FFD0D7">FAILED</text>
+<rect x="60" y="605" width="1080" height="10" rx="5" fill="url(#accent)"/>
+</svg>
