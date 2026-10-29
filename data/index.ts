@@ -76,6 +76,24 @@ export const gridItems = [
 
 export const projects = [
   {
+    id: 7,
+    title: "PatchVerdict",
+    des: "AI-assisted bug investigation and repair verification with recorded test evidence, integrity checks, and human-review verdicts. Public demo is read-only.",
+    img: "/patchverdict-project.svg",
+    iconLists: ["/ts.svg", "/next.svg", "/node.svg"],
+    link: "https://patchverdict.duckdns.org/",
+    github: "https://github.com/prahans/patch-verdict",
+  },
+  {
+    id: 8,
+    title: "RepoExplain",
+    des: "AI-powered analysis of public GitHub repositories, explaining architecture, technologies, important files, and improvement opportunities in a structured report.",
+    img: "/repo-explain-project.svg",
+    iconLists: ["/next.svg", "/ts.svg", "/re.svg"],
+    link: "https://repo-explain-gamma.vercel.app/",
+    github: "https://github.com/prahans/repo-explain",
+  },
+  {
     id: 1,
     title: "WanderLust",
     des: "A full-stack vacation rental platform where users can explore listings, view property details, create and manage accommodations, and securely authenticate.",
